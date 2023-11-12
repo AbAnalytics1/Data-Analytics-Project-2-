@@ -63,6 +63,7 @@ SELECT * FROM PRODUCT_SUBCATEGORY;
 
 -- Creating the Product lookup table
 
+
 CREATE TABLE PRODUCT(
 
 	ProductKey			SMALLINT NOT NULL,
@@ -129,5 +130,23 @@ FOREIGN KEY (CustomerID) REFERENCES CUSTOMERS(CustomerID),
 FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)	
 
 );
+
+
+
+-- creating the returns table.
+
+
+CREATE TABLE RETURNS(
+
+ReturnDate		DATE,
+ProductKey		SMALLINT NOT NULL,
+TerritoryKey	SMALLINT NOT NULL,
+ReturnQuantity	INT,
+FOREIGN KEY (ProductKey) REFERENCES PRODUCT(ProductKey),
+FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)	
+
+);
+
+-- To be continued...
 
 

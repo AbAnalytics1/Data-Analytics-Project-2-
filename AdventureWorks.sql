@@ -18,6 +18,11 @@ CREATE TABLE CUSTOMERS(
     HomeOwner			VARCHAR(25)
     
 );
+
+ALTER TABLE CUSTOMERS
+ADD PRIMARY KEY (CustomerID); 
+
+
 ALTER TABLE CUSTOMERS
 ADD BirthDate		DATE;
 
@@ -75,7 +80,7 @@ CREATE TABLE PRODUCT(
     FOREIGN KEY (SubCategoryKey) REFERENCES PRODUCT_SUBCATEGORY(SubCategoryKey)
 );
 
--- Cretaing the Calender lookup table
+-- Creating the Calender lookup table
 
 CREATE TABLE Calendar (
     CalendarDate DATE PRIMARY KEY,
@@ -92,5 +97,37 @@ CREATE TABLE Calendar (
     StartOfYear DATE
 );
 
--- Dat will be imported into this table.
+-- Data will be imported into this table.
+
+-- Creating the territory table.
+
+CREATE TABLE TERRITORY(
+
+TerritoryKey		SMALLINT NOT NULL,
+REGION				VARCHAR(50),
+COUNTRY				VARCHAR(50),
+CONTINENT			VARCHAR(50),
+PRIMARY KEY (TerritoryKey)
+);
+
+-- Data will be imported.
+
+-- sales table 
+
+CREATE TABLE SALES(
+
+OrderDate		DATE,
+StockDate		DATE,
+OrderNumber		SMALLINT NOT NULL,
+ProductKey		SMALLINT NOT NULL,
+CustomerID		INT NOT NULL,
+TerritoryKey	SMALLINT NOT NULL,
+OrderItem		INT,
+OrderQuantity	INT,
+FOREIGN KEY (ProductKey) REFERENCES PRODUCT(ProductKey),
+FOREIGN KEY (CustomerID) REFERENCES CUSTOMERS(CustomerID),
+FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)	
+
+);
+
 

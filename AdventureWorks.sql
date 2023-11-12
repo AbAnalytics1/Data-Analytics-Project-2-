@@ -22,3 +22,75 @@ ALTER TABLE CUSTOMERS
 ADD BirthDate		DATE;
 
 SELECT * FROM CUSTOMERS;
+-- Creating Product category table. In this table i  will manually input the data
+-- This is because the data is small. 
+
+CREATE TABLE PRODUCT_CATEGORY(
+
+	CategoryKey		SMALLINT NOT NULL,
+    CategoryName	VARCHAR(50),
+    PRIMARY KEY (CategoryKey)
+);
+
+INSERT INTO  PRODUCT_CATEGORY VALUES
+(1,"Bikes"),
+(2, "Components"),
+(3, "Clothing"),
+(4, "Accessories");
+
+SELECT * FROM PRODUCT_CATEGORY;
+
+CREATE TABLE PRODUCT_SUBCATEGORY(
+
+	SubCategoryKey		SMALLINT NOT NULL,
+    SubCategoryName		VARCHAR(100),
+    CategoryKey			SMALLINT NOT NULL,
+    FOREIGN KEY (CategoryKey) REFERENCES PRODUCT_CATEGORY(CategoryKey)
+);
+
+-- Data will be import the data for this table.
+
+ALTER TABLE PRODUCT_SUBCATEGORY
+ADD PRIMARY KEY (SubCategoryKey);
+
+
+SELECT * FROM PRODUCT_SUBCATEGORY;
+
+-- Creating the Product lookup table
+
+CREATE TABLE PRODUCT(
+
+	ProductKey			SMALLINT NOT NULL,
+	SubCategoryKey		SMALLINT NOT NULL,
+    ProductSKU			VARCHAR(25),
+    ProductName			VARCHAR(50),
+    ModelName			VARCHAR(25),
+    ProductDescription	VARCHAR(250),
+    ProductColor		VARCHAR(25),
+    ProductSize			INT,
+    ProductStyle		VARCHAR(25),
+    ProductCost			DECIMAL,
+    ProductPrice		DECIMAL,
+    PRIMARY KEY (ProductKey),
+    FOREIGN KEY (SubCategoryKey) REFERENCES PRODUCT_SUBCATEGORY(SubCategoryKey)
+);
+
+-- Cretaing the Calender lookup table
+
+CREATE TABLE Calendar (
+    CalendarDate DATE PRIMARY KEY,
+    DayOfWeek VARCHAR(20),
+    DayOfMonth INT,
+    DayOfYear INT,
+    WeekOfMonth INT,
+    Month INT,
+    MonthName VARCHAR(20),
+    Quarter INT,
+    Year INT,
+    StartOfWeek DATE,
+    StartOfMonth DATE,
+    StartOfYear DATE
+);
+
+-- Dat will be imported into this table.
+

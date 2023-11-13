@@ -98,9 +98,13 @@ CREATE TABLE Calendar (
     StartOfYear DATE
 );
 
+ALTER TABLE Calendar
+ADD StartOfQuater	DATE;
+
 -- Data will be imported into this table.
 
 -- Creating the territory table.
+
 
 CREATE TABLE TERRITORY(
 
@@ -111,7 +115,28 @@ CONTINENT			VARCHAR(50),
 PRIMARY KEY (TerritoryKey)
 );
 
--- Data will be imported.
+
+
+INSERT INTO TERRITORY VALUES 
+(1,"Northwest","United States","North America"),
+(2,"Northeast","Unoted States","North America"),
+(3,"Central","Unoted States","North America"),
+(4,"Sothwest","United States","North America"),
+(5,"Southeast","United States","North America"),
+(6,"Canada","Canada","North Americs"),
+(7,"France","France","Europe"),
+(8,"Germany","Germany","Europe"),
+(9,"Australia","Australia","Pacific"),
+(10,"United Kingdom","United Kingdom","Europe");
+
+
+
+UPDATE TERRITORY
+SET COUNTRY = 'United States'
+WHERE TerritoryKey = 2 OR TerritoryKey = 3;
+
+
+SELECT * FROM TERRITORY;
 
 -- sales table 
 

@@ -81,7 +81,7 @@ CREATE TABLE PRODUCT(
     FOREIGN KEY (SubCategoryKey) REFERENCES PRODUCT_SUBCATEGORY(SubCategoryKey)
 );
 
--- Creating the Calender lookup table
+-- Creating the Calender lookup table 
 
 CREATE TABLE Calendar (
     CalendarDate DATE PRIMARY KEY,
@@ -173,5 +173,5 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 );
 
 -- To be continued...
-
+-- Data will be uploaded by importing  them from the source.
 

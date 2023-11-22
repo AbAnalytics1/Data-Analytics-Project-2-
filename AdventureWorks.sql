@@ -173,5 +173,6 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 );
 
 -- To be continued...
--- Data will be uploaded by importing  them from the source.
+-- Data will be uploaded by importing  them from the source soon.
+-- EDA process starts from here.
 

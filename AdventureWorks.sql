@@ -172,7 +172,7 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 
 );
 
--- To be continued...
+
 
 -- EDA process starts from here.
 

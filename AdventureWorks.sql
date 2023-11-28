@@ -174,7 +174,11 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 
 
 
+
+-- Upload  done 
+-- Data Manipulation:
+-- Data Querying:
+-- Data Filtering:
 -- EDA process starts from here.
--- Upload to be done 
 
 

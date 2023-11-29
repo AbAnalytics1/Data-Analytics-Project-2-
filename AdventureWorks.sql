@@ -22,9 +22,18 @@ CREATE TABLE CUSTOMERS(
 ALTER TABLE CUSTOMERS
 ADD PRIMARY KEY (CustomerID); 
 
+-- Added more columns to the table
 
 ALTER TABLE CUSTOMERS
-ADD BirthDate		DATE;
+ADD COLUMN NewBirthDate 		DATE,
+ADD COLUMN `Parent` 			VARCHAR(25),
+ADD COLUMN DomainName 			VARCHAR(25),
+ADD COLUMN Priority 			VARCHAR(25),
+ADD COLUMN FullName 			VARCHAR(25),
+ADD COLUMN SalaryRange 			DECIMAL(10,2);
+
+
+
 
 SELECT * FROM CUSTOMERS;
 -- Creating Product category table. In this table i  will manually input the data

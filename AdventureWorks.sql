@@ -189,7 +189,7 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 -- Data Querying:
 -- Data Filtering:
 -- EDA process starts from here.
--- To be completed Next two weeks
+
 
 
 

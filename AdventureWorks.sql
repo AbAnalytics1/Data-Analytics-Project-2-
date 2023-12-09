@@ -189,6 +189,7 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 -- Data Querying:
 -- Data Filtering:
 -- EDA process starts from here.
+-- Continues tomorrow. Groupby
 
 
 

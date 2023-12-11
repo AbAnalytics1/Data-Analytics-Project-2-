@@ -2,7 +2,7 @@ CREATE DATABASE Adventure_Works;
 USE Adventure_Works;
 
 -- Next create tables
--- Creating customer Table
+-- Creating customer Table and proceed
 
 CREATE TABLE CUSTOMERS(
 	CustomerID			INT NOT NULL,
@@ -188,7 +188,7 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 -- Data Manipulation:
 -- Data Querying:
 -- Data Filtering:
--- EDA process starts from here.
+-- EDA
 
 
 

@@ -188,7 +188,7 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 -- Data Manipulation:
 -- Data Querying:
 -- Data Filtering:
--- EDA
+
 
 
 

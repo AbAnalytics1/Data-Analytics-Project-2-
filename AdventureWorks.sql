@@ -184,8 +184,8 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 
 
 
--- Upload  done 
--- Data Manipulation:
+
+
 
 
 

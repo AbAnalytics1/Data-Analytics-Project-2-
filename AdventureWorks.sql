@@ -167,7 +167,7 @@ FOREIGN KEY (TerritoryKey)REFERENCES TERRITORY(TerritoryKey)
 
 
 
--- creating the returns table.
+
 
 
 CREATE TABLE RETURNS(

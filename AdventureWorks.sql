@@ -147,7 +147,7 @@ WHERE TerritoryKey = 2 OR TerritoryKey = 3;
 
 SELECT * FROM TERRITORY;
 
--- sales table 
+
 
 CREATE TABLE SALES(
 

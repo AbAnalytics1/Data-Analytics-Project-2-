@@ -112,7 +112,7 @@ ADD StartOfQuater	DATE;
 
 -- Data will be imported into this table.
 
--- Creating the territory table.
+
 
 
 CREATE TABLE TERRITORY(

@@ -2,7 +2,7 @@ CREATE DATABASE Adventure_Works;
 USE Adventure_Works;
 
 -- Next create tables
--- Creating customer Table and proceed
+
 
 CREATE TABLE CUSTOMERS(
 	CustomerID			INT NOT NULL,

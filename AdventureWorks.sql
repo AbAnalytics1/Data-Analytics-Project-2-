@@ -61,7 +61,6 @@ CREATE TABLE PRODUCT_SUBCATEGORY(
     FOREIGN KEY (CategoryKey) REFERENCES PRODUCT_CATEGORY(CategoryKey)
 );
 
--- Data will be import the data for this table.
 
 ALTER TABLE PRODUCT_SUBCATEGORY
 ADD PRIMARY KEY (SubCategoryKey);

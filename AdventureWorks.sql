@@ -68,7 +68,7 @@ ADD PRIMARY KEY (SubCategoryKey);
 
 SELECT * FROM PRODUCT_SUBCATEGORY;
 
--- Creating the Product lookup table
+
 
 
 CREATE TABLE PRODUCT(
@@ -88,7 +88,7 @@ CREATE TABLE PRODUCT(
     FOREIGN KEY (SubCategoryKey) REFERENCES PRODUCT_SUBCATEGORY(SubCategoryKey)
 );
 
--- Creating the Calender lookup table 
+
 
 CREATE TABLE Calendar (
     CalendarDate DATE PRIMARY KEY,
